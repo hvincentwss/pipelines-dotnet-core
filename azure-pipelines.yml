@@ -16,6 +16,7 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
-- task: WhiteSource@20
+- task: whitesource.WhiteSource-azure-devops-services.bolt.wss.WhiteSource@20
+
   inputs:
     cwd: '$(System.DefaultWorkingDirectory)'
